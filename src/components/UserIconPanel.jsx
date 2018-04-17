@@ -7,10 +7,18 @@ function UserIconPanel(props) {
 
   var HeadingStyles = {
     padding: '50px',
-    backgroundColor: 'Dodgerblue'
+    backgroundColor: 'Dodgerblue',
+    marginBottom: '0px',
+    padding: '50px 0 0 0'
   }
   var BodyStyles = {
     display: 'inline-block'
+  }
+  var ImageStyles = {
+    width: '40px',
+    height: '40px',
+    position: 'inline-block',
+    backgroundColor: 'white'
   }
 
   return(
@@ -18,10 +26,10 @@ function UserIconPanel(props) {
       <div className="container">
 
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-5">
         <Panel>
-          <Panel.Heading style={HeadingStyles}></Panel.Heading>
-          <img src={userImage}></img>
+          <Panel.Heading style={HeadingStyles}><img style={ImageStyles} src={userImage}></img></Panel.Heading>
+
           <Panel.Body >Tweets</Panel.Body>
             <Panel.Body style={BodyStyles}>Following</Panel.Body>
               <Panel.Body style={BodyStyles}>Followers</Panel.Body>
